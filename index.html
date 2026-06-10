@@ -21,14 +21,10 @@ html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
 a{color:var(--accent2);text-decoration:none}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
-
-/* animated bg */
 .bg-glow{position:fixed;top:-30%;left:-20%;width:70%;height:80%;background:radial-gradient(ellipse,var(--accent-dim)0%,transparent 70%);pointer-events:none;z-index:0;animation:drift 20s ease-in-out infinite alternate}
 .bg-glow2{position:fixed;bottom:-30%;right:-20%;width:60%;height:70%;background:radial-gradient(ellipse,rgba(52,211,153,.06)0%,transparent 70%);pointer-events:none;z-index:0;animation:drift2 25s ease-in-out infinite alternate}
 @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(10%,8%)}}
 @keyframes drift2{0%{transform:translate(0,0)}100%{transform:translate(-8%,-10%)}}
-
-/* Nav */
 nav{position:sticky;top:0;z-index:100;background:rgba(6,7,14,.8);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
 nav .container{display:flex;align-items:center;justify-content:space-between;height:60px}
 .nav-l{display:flex;align-items:center;gap:10px}
@@ -37,26 +33,16 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .nav-links{display:flex;gap:20px;font-size:13px;font-weight:500}
 .nav-links a{color:var(--text2);transition:color .15s}
 .nav-links a:hover{color:var(--text)}
-#connectBtn{
-  padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;
-  border:none;cursor:pointer;transition:all .15s;font-family:var(--font);
-  background:var(--accent);color:#fff;white-space:nowrap;
-}
+#connectBtn{padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:all .15s;font-family:var(--font);background:var(--accent);color:#fff;white-space:nowrap}
 #connectBtn:hover{background:var(--accent2);transform:translateY(-1px)}
-#connectBtn.connected{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.3);cursor:default}
-#connectBtn.connected:hover{transform:none}
-
-/* Hero */
+#connectBtn.connected{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.3)}
 .hero{position:relative;z-index:1;padding:70px 0 40px;text-align:center}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;background:var(--accent-dim);color:var(--accent2);border:1px solid rgba(124,92,252,.2);margin-bottom:18px}
 .hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:-.5px;line-height:1.15;margin-bottom:14px}
 .hero h1 .grad{background:linear-gradient(135deg,var(--accent2),var(--green),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero p{font-size:15px;color:var(--text2);max-width:520px;margin:0 auto 24px;line-height:1.7}
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary,.btn-secondary{
-  padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;
-  border:none;cursor:pointer;transition:all .2s;font-family:var(--font);
-}
+.btn-primary,.btn-secondary{padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .2s;font-family:var(--font)}
 .btn-primary{background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(124,92,252,.35)}
 .btn-secondary{background:var(--card);color:var(--text);border:1px solid var(--border)}
@@ -65,27 +51,19 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .hero-stats .stat{text-align:center}
 .hero-stats .stat .n{font-size:22px;font-weight:800;display:block;background:linear-gradient(135deg,var(--accent2),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-stats .stat .l{font-size:12px;color:var(--text3);margin-top:2px}
-
-/* progress */
 .progress-wrap{margin:24px auto 0;max-width:400px}
 .progress-bar{width:100%;height:6px;background:var(--card);border-radius:3px;overflow:hidden}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--green));border-radius:3px;transition:width .5s}
 .progress-label{display:flex;justify-content:space-between;font-size:11px;color:var(--text3);margin-top:5px}
-
-/* sections */
 section{z-index:1;position:relative;padding:50px 0}
 .section-title{font-size:22px;font-weight:800;margin-bottom:6px;text-align:center}
 .section-sub{font-size:14px;color:var(--text2);text-align:center;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
-
-/* About */
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .about-card{padding:20px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);transition:border-color .2s}
 .about-card:hover{border-color:rgba(124,92,252,.3)}
 .about-card .icon{font-size:24px;margin-bottom:8px}
 .about-card h3{font-size:14px;font-weight:700;margin-bottom:4px}
 .about-card p{font-size:12px;color:var(--text2);line-height:1.6}
-
-/* Preview */
 .preview-section{display:flex;gap:24px;align-items:stretch;flex-wrap:wrap;justify-content:center}
 .preview-card{width:300px;height:300px;border-radius:var(--radius-lg);background:var(--card);border:1px solid var(--border);overflow:hidden;flex-shrink:0}
 .preview-card svg{width:100%;height:100%;display:block}
@@ -101,20 +79,13 @@ section{z-index:1;position:relative;padding:50px 0}
 .qty-ctl button{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);background:var(--bg3);color:var(--text);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .1s}
 .qty-ctl button:hover{border-color:var(--accent);color:var(--accent)}
 .qty-ctl .qty{font-size:16px;font-weight:700;width:32px;text-align:center}
-#mintBtn{
-  width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;
-  border:none;cursor:pointer;transition:all .15s;
-  background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff;
-}
+#mintBtn{width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .15s;background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff}
 #mintBtn:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 4px 20px rgba(124,92,252,.3)}
 #mintBtn:disabled{opacity:.4;cursor:not-allowed}
 #mintBtn.loading{opacity:.7}
-#mintBtn.insufficient{background:var(--card);color:var(--text3);border:1px solid var(--border)}
 .mint-status{font-size:12px;color:var(--text2);text-align:center;min-height:20px}
 .mint-status.error{color:#f87171}
 .mint-status.success{color:var(--green)}
-
-/* Gallery */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
 .gallery-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s;cursor:pointer}
 .gallery-item:hover{border-color:var(--accent)}
@@ -123,39 +94,45 @@ section{z-index:1;position:relative;padding:50px 0}
 .gallery-item .info{padding:8px 10px;font-size:12px;font-weight:600;text-align:center;color:var(--text2)}
 .gallery-empty{padding:50px 20px;text-align:center;color:var(--text3);font-size:13px;background:var(--card);border:1px dashed var(--border);border-radius:var(--radius)}
 .gallery-loading{text-align:center;padding:20px;color:var(--text3);font-size:13px}
-
-/* How to mint */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 .step{padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);position:relative}
 .step .num{position:absolute;top:-8px;left:-8px;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--green));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff}
 .step h4{font-size:14px;font-weight:700;margin-bottom:4px;margin-top:4px}
 .step p{font-size:12px;color:var(--text2);line-height:1.5}
-
-/* Features */
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .feature{padding:18px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);display:flex;gap:12px;align-items:flex-start}
 .feature .fi{font-size:20px;flex-shrink:0;margin-top:2px}
 .feature h4{font-size:13px;font-weight:700;margin-bottom:2px}
 .feature p{font-size:12px;color:var(--text2);line-height:1.5}
-
-/* Contract info */
 .contract-info{text-align:center;padding:16px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border);margin-top:10px}
 .contract-info .addr{font-family:var(--mono);font-size:12px;color:var(--text2);word-break:break-all;background:var(--bg3);padding:6px 12px;border-radius:6px;display:inline-block;margin-top:4px;cursor:pointer;transition:border-color .15s;border:1px solid transparent}
 .contract-info .addr:hover{border-color:var(--accent)}
-
-/* Toast */
-.toast{position:fixed;bottom:24px;right:24px;z-index:200;padding:14px 20px;border-radius:10px;font-size:13px;font-weight:500;max-width:360px;display:none;animation:slideIn .3s ease}
+.toast{position:fixed;bottom:24px;right:24px;z-index:200;padding:14px 20px;border-radius:10px;font-size:13px;font-weight:500;max-width:360px;display:none}
 .toast.show{display:block}
 .toast.success{background:#065f46;color:var(--green);border:1px solid rgba(52,211,153,.3)}
 .toast.error{background:#7f1d1d;color:#fca5a5;border:1px solid rgba(248,113,113,.3)}
 .toast.info{background:#1e1b4b;color:var(--accent2);border:1px solid rgba(124,92,252,.3)}
-@keyframes slideIn{from{transform:translateX(100px);opacity:0}to{transform:translateX(0);opacity:1}}
-
-/* Footer */
 footer{z-index:1;position:relative;text-align:center;padding:30px 0;font-size:12px;color:var(--text3);border-top:1px solid var(--border)}
 footer .links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
 footer .links a{font-size:13px;color:var(--text2)}
 footer .links a:hover{color:var(--accent2)}
+
+/* Wallet Modal */
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);z-index:300;display:none;align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;max-width:380px;width:90%;max-height:90vh;overflow-y:auto}
+.modal-box h3{font-size:16px;font-weight:700;text-align:center;margin-bottom:16px}
+.wallet-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wallet-btn{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 8px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg3);cursor:pointer;transition:all .15s;font-family:var(--font)}
+.wallet-btn:hover{border-color:var(--accent);background:var(--card-hover)}
+.wallet-btn .w-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex-shrink:0}
+.wallet-btn .w-name{font-size:12px;font-weight:600;color:var(--text)}
+.wallet-btn .w-status{font-size:10px;color:var(--text3)}
+.wallet-btn.disabled{opacity:.4;cursor:not-allowed}
+.wallet-btn.disabled:hover{border-color:var(--border);background:var(--bg3)}
+.modal-close{text-align:center;margin-top:14px}
+.modal-close button{background:none;border:none;color:var(--text3);font-size:12px;cursor:pointer;font-family:var(--font)}
+.modal-close button:hover{color:var(--text2)}
 
 /* Mobile */
 .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px}
@@ -219,26 +196,10 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">什么是 Chain Gems？</h2>
   <p class="section-sub">一个完全链上的生成艺术 NFT 项目。几何图案、颜色、属性全部由合约在链上实时生成，不依赖任何外部存储。</p>
   <div class="about-grid">
-    <div class="about-card">
-      <div class="icon">&#x1F4E6;</div>
-      <h3>完全链上</h3>
-      <p>元数据和 SVG 图像由 Solidity 合约实时生成，Base64 编码直接返回，零外部依赖，永久存于 BSC。</p>
-    </div>
-    <div class="about-card">
-      <div class="icon">&#x2728;</div>
-      <h3>生成式艺术</h3>
-      <p>6 种几何形态 × 10 种配色 × 10 种背景，配合可变的装饰环和点缀点，每枚都是独一无二的艺术品。</p>
-    </div>
-    <div class="about-card">
-      <div class="icon">&#x1F3B2;</div>
-      <h3>稀有属性</h3>
-      <p>每枚 NFT 包含 4 个属性维度（背景、形状、强调色、环大小），通过链上随机种子在铸造时确定。</p>
-    </div>
-    <div class="about-card">
-      <div class="icon">&#x1F4B0;</div>
-      <h3>创造者版税</h3>
-      <p>二级市场交易自动收取 5% 版税，持续为创作者产生收益。</p>
-    </div>
+    <div class="about-card"><div class="icon">&#x1F4E6;</div><h3>完全链上</h3><p>元数据和 SVG 图像由 Solidity 合约实时生成，Base64 编码直接返回，零外部依赖，永久存于 BSC。</p></div>
+    <div class="about-card"><div class="icon">&#x2728;</div><h3>生成式艺术</h3><p>6 种几何形态 × 10 种配色 × 10 种背景，配合可变的装饰环和点缀点，每枚都是独一无二的艺术品。</p></div>
+    <div class="about-card"><div class="icon">&#x1F3B2;</div><h3>稀有属性</h3><p>每枚 NFT 包含 4 个属性维度（背景、形状、强调色、环大小），通过链上随机种子在铸造时确定。</p></div>
+    <div class="about-card"><div class="icon">&#x1F4B0;</div><h3>创造者版税</h3><p>二级市场交易自动收取 5% 版税，持续为创作者产生收益。</p></div>
   </div>
 </div>
 </section>
@@ -248,34 +209,21 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">铸造你的宝石</h2>
   <p class="section-sub">连接钱包，选择数量，点击铸造。每个独一无二的 Chain Gem 将立即属于你。</p>
   <div class="preview-section">
-    <div class="preview-card" id="previewCard">
-      <div class="ph" id="previewPlaceholder">连接钱包预览藏品</div>
-    </div>
+    <div class="preview-card" id="previewCard"><div class="ph" id="previewPlaceholder">连接钱包预览藏品</div></div>
     <div class="preview-info">
       <h2 id="collectionName">Chain Gems Genesis</h2>
       <div class="desc" id="collectionDesc">连接钱包加载藏品信息...</div>
       <div class="mint-box">
-        <div class="mint-row">
-          <span class="label">价格</span>
-          <span class="val" id="mintPriceDisplay">-- BNB</span>
-        </div>
+        <div class="mint-row"><span class="label">价格</span><span class="val" id="mintPriceDisplay">-- BNB</span></div>
         <div class="mint-row">
           <span class="label">数量</span>
-          <div class="qty-ctl">
-            <button id="qtyDec">−</button>
-            <span class="qty" id="mintQty">1</span>
-            <button id="qtyInc">+</button>
-          </div>
+          <div class="qty-ctl"><button id="qtyDec">&minus;</button><span class="qty" id="mintQty">1</span><button id="qtyInc">+</button></div>
         </div>
-        <div class="mint-row">
-          <span class="label">总计</span>
-          <span class="val" id="totalDisplay">-- BNB</span>
-        </div>
+        <div class="mint-row"><span class="label">总计</span><span class="val" id="totalDisplay">-- BNB</span></div>
         <button id="mintBtn" disabled>请先连接钱包</button>
         <div class="mint-status" id="mintStatus"></div>
         <div class="mint-row" style="padding-top:8px;border-top:1px solid var(--border);margin-top:4px">
-          <span class="label">&#9670; 网络</span>
-          <span class="val" style="font-size:12px;color:var(--text2)" id="chainDisplay">BSC 主网</span>
+          <span class="label">&#9670; 网络</span><span class="val" style="font-size:12px;color:var(--text2)" id="chainDisplay">BSC 主网</span>
         </div>
       </div>
     </div>
@@ -287,9 +235,7 @@ footer .links a:hover{color:var(--accent2)}
 <div class="container">
   <h2 class="section-title">我的藏品</h2>
   <p class="section-sub">连接钱包后，你拥有的 Chain Gems 会显示在这里。</p>
-  <div id="galleryGrid" class="gallery-grid">
-    <div class="gallery-empty">连接钱包后，你的藏品会显示在这里</div>
-  </div>
+  <div id="galleryGrid" class="gallery-grid"><div class="gallery-empty">连接钱包后，你的藏品会显示在这里</div></div>
 </div>
 </section>
 
@@ -298,30 +244,12 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">为什么选择 Chain Gems？</h2>
   <p class="section-sub">不只是 JPG。真正的链上艺术，真正的所有权。</p>
   <div class="features-grid">
-    <div class="feature">
-      <div class="fi">&#x1F5C4;</div>
-      <div><h4>永不消失</h4><p>只要 BSC 存在，你的 NFT 就存在。SVG 和元数据由合约直接生成，不依赖 IPFS、AWS 或任何外部服务。</p></div>
-    </div>
-    <div class="feature">
-      <div class="fi">&#x1F3A8;</div>
-      <div><h4>独特美学</h4><p>几何抽象风格，6 种形状（轨道、六边形、钻石、星形、花朵、波浪）× 10 种高级配色。</p></div>
-    </div>
-    <div class="feature">
-      <div class="fi">&#x26A1;</div>
-      <div><h4>低 Gas 成本</h4><p>部署在 BSC，铸造 Gas 费仅需 .01-0.03，远低于以太坊主网。人人可参与。</p></div>
-    </div>
-    <div class="feature">
-      <div class="fi">&#x1F511;</div>
-      <div><h4>真正拥有</h4><p>私钥即所有权。没有人可以修改、删除或冻结你的资产。代码即法律。</p></div>
-    </div>
-    <div class="feature">
-      <div class="fi">&#x1F4C8;</div>
-      <div><h4>有限供应</h4><p>仅 500 枚，永不增发。稀缺性是价值的基石。</p></div>
-    </div>
-    <div class="feature">
-      <div class="fi">&#x1F30D;</div>
-      <div><h4>OpenSea 即用</h4><p>兼容 ERC-721，自动在 OpenSea 显示，可直接上架交易。</p></div>
-    </div>
+    <div class="feature"><div class="fi">&#x1F5C4;</div><div><h4>永不消失</h4><p>只要 BSC 存在，你的 NFT 就存在。SVG 和元数据由合约直接生成，不依赖 IPFS、AWS 或任何外部服务。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F3A8;</div><div><h4>独特美学</h4><p>几何抽象风格，6 种形状（轨道、六边形、钻石、星形、花朵、波浪）× 10 种高级配色。</p></div></div>
+    <div class="feature"><div class="fi">&#x26A1;</div><div><h4>低 Gas 成本</h4><p>部署在 BSC，铸造 Gas 费仅需 $0.01-0.03，远低于以太坊主网。人人可参与。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F511;</div><div><h4>真正拥有</h4><p>私钥即所有权。没有人可以修改、删除或冻结你的资产。代码即法律。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F4C8;</div><div><h4>有限供应</h4><p>仅 500 枚，永不增发。稀缺性是价值的基石。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F30D;</div><div><h4>OpenSea 即用</h4><p>兼容 ERC-721，自动在 OpenSea 显示，可直接上架交易。</p></div></div>
   </div>
 </div>
 </section>
@@ -331,28 +259,16 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">如何铸造</h2>
   <p class="section-sub">三步即可拥有你的第一枚 Chain Gem。</p>
   <div class="steps">
-    <div class="step">
-      <div class="num">1</div>
-      <h4>安装 MetaMask</h4>
-      <p>下载 MetaMask 钱包，创建或导入钱包。确保已切换到 BSC 主网（Chain ID: 56）并持有少量 BNB 作为 Gas 费。</p>
-    </div>
-    <div class="step">
-      <div class="num">2</div>
-      <h4>连接钱包</h4>
-      <p>点击右上角「连接钱包」，授权 MetaMask 连接。铸造数量默认 1 枚，单次最多 5 枚。</p>
-    </div>
-    <div class="step">
-      <div class="num">3</div>
-      <h4>铸造并查看</h4>
-      <p>点击「铸造」，在 MetaMask 确认交易。完成后你的 NFT 会出现在下方画廊中，可在 OpenSea 上交易。</p>
-    </div>
+    <div class="step"><div class="num">1</div><h4>选择钱包</h4><p>安装 MetaMask、OKX Wallet、Trust Wallet、TokenPocket 或 Binance Web3 钱包，确保有少量 BNB 作为 Gas 费。</p></div>
+    <div class="step"><div class="num">2</div><h4>连接钱包</h4><p>点击右上角「连接钱包」，选择你的钱包授权连接。页面会自动切换到 BSC 主网。单次最多铸造 5 枚。</p></div>
+    <div class="step"><div class="num">3</div><h4>铸造并查看</h4><p>点击「铸造」，在钱包中确认交易。完成后你的 NFT 会出现在下方画廊中，可在 OpenSea 上交易。</p></div>
   </div>
   <div class="contract-info">
     <div>合约地址</div>
-    <div class="addr" onclick="navigator.clipboard.writeText('0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5');showToast('已复制合约地址','success')">0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5</div>
+    <div class="addr" onclick="navigator.clipboard.writeText('0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5');showToast('&#x2705; 已复制合约地址','success')">0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5</div>
     <div style="margin-top:8px;font-size:11px;color:var(--text3)">
       <a href="https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">BSCscan ↗</a>
-      &nbsp;·&nbsp;
+      &nbsp;&middot;&nbsp;
       <a href="https://opensea.io/zh-CN/assets/bsc/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">OpenSea ↗</a>
     </div>
   </div>
@@ -364,13 +280,29 @@ footer .links a:hover{color:var(--accent2)}
   <div class="links">
     <a href="https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">BSCscan</a>
     <a href="https://opensea.io/zh-CN/assets/bsc/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">OpenSea</a>
-    <a href="#" onclick="navigator.clipboard.writeText('0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5');showToast('已复制合约地址','success')">复制合约地址</a>
+    <a href="#" onclick="navigator.clipboard.writeText('0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5');showToast('&#x2705; 已复制合约地址','success')">复制合约地址</a>
   </div>
-  <p>Chain Gems · Fully On-Chain Generative Art · BSC Mainnet</p>
+  <p>Chain Gems &middot; Fully On-Chain Generative Art &middot; BSC Mainnet</p>
 </div>
 </footer>
 
 <div class="toast" id="toast"></div>
+
+<!-- Wallet Selection Modal -->
+<div class="modal-overlay" id="walletModal">
+<div class="modal-box">
+  <h3>选择钱包</h3>
+  <div class="wallet-grid">
+    <div class="wallet-btn" data-wallet="metamask" onclick="connectWallet('metamask')"><div class="w-icon" style="background:#f6851b;color:#fff;border-radius:8px">M</div><div class="w-name">MetaMask</div><div class="w-status" id="ws-mm">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="okx" onclick="connectWallet('okx')"><div class="w-icon" style="background:#000;color:#fff;border-radius:8px">OKX</div><div class="w-name">OKX Wallet</div><div class="w-status" id="ws-okx">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="trust" onclick="connectWallet('trust')"><div class="w-icon" style="background:#3375bb;color:#fff;border-radius:8px">T</div><div class="w-name">Trust Wallet</div><div class="w-status" id="ws-trust">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="tp" onclick="connectWallet('tp')"><div class="w-icon" style="background:#1d2129;color:#fecc2f;border-radius:8px">TP</div><div class="w-name">TokenPocket</div><div class="w-status" id="ws-tp">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="binance" onclick="connectWallet('binance')"><div class="w-icon" style="background:#f0b90b;color:#1e2329;border-radius:8px">B</div><div class="w-name">Binance Web3</div><div class="w-status" id="ws-bn">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="injected" onclick="connectWallet('injected')"><div class="w-icon" style="background:linear-gradient(135deg,var(--accent),var(--green));color:#fff;border-radius:8px">+</div><div class="w-name">其他钱包</div><div class="w-status" id="ws-other">检测中...</div></div>
+  </div>
+  <div class="modal-close"><button onclick="closeWalletModal()">取消</button></div>
+</div>
+</div>
 <script>
 const CONFIG = {
   contractAddress: "0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5",
@@ -380,124 +312,152 @@ const CONFIG = {
   explorerUrl: "https://bscscan.com",
 };
 const ABI = [
-  "function totalSupply() view returns (uint256)",
-  "function maxSupply() view returns (uint256)",
-  "function mintPrice() view returns (uint256)",
-  "function projectName() view returns (string)",
-  "function projectDescription() view returns (string)",
-  "function totalMinted() view returns (uint256)",
+  "function totalSupply() view returns (uint256)","function maxSupply() view returns (uint256)",
+  "function mintPrice() view returns (uint256)","function projectName() view returns (string)",
+  "function projectDescription() view returns (string)","function totalMinted() view returns (uint256)",
   "function balanceOf(address owner) view returns (uint256)",
   "function tokenOfOwnerByIndex(address owner, uint256 index) view returns (uint256)",
-  "function tokenURI(uint256 tokenId) view returns (string)",
-  "function mint(uint256 quantity) payable",
+  "function tokenURI(uint256 tokenId) view returns (string)","function mint(uint256 quantity) payable",
   "function maxPerWallet() view returns (uint256)",
   "event Minted(address indexed minter, uint256 indexed tokenId, uint256 timestamp)"
 ];
 let provider, signer, contract, account;
 let mintQty = 1;
 const $ = s => document.querySelector(s);
-const  = s => document.querySelectorAll(s);
 
 function showToast(msg, type) {
-  const t = #toast;
-  t.textContent = msg;
-  t.className = 'toast ' + type + ' show';
+  const t = $('#toast');
+  t.textContent = msg; t.className = 'toast ' + type + ' show';
   clearTimeout(t._hide);
   t._hide = setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-async function switchNetwork() {
-  if (!window.ethereum) return false;
-  try {
-    await window.ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{ chainId: '0x38' }] // 56
-    });
-    return true;
-  } catch (e) {
-    if (e.code === 4902) {
-      try {
-        await window.ethereum.request({
-          method: 'wallet_addEthereumChain',
-          params: [{
-            chainId: '0x38',
-            chainName: 'BNB Smart Chain',
-            nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
-            rpcUrls: ['https://bsc-dataseed1.binance.org'],
-            blockExplorerUrls: ['https://bscscan.com']
-          }]
-        });
-        return true;
-      } catch(e2) { return false; }
-    }
-    return false;
+function connectWallet(walletType) {
+  if (!walletType) { updateWalletStatus(); $('#walletModal').classList.add('show'); return; }
+  $('#walletModal').classList.remove('show');
+
+  let pToUse, walletName;
+  const et = window.ethereum;
+  const has = (x) => typeof x !== 'undefined' && x;
+
+  if (walletType === 'metamask') {
+    if (!et || !et.isMetaMask) { showToast('请安装 MetaMask', 'error'); return; }
+    pToUse = et; walletName = 'MetaMask';
+  } else if (walletType === 'okx') {
+    if (typeof window.okxwallet === 'undefined') { showToast('请安装 OKX Wallet', 'error'); return; }
+    pToUse = window.okxwallet; walletName = 'OKX Wallet';
+  } else if (walletType === 'trust') {
+    if (!et || !et.isTrust) { showToast('请安装 Trust Wallet', 'error'); return; }
+    pToUse = et; walletName = 'Trust Wallet';
+  } else if (walletType === 'tp') {
+    if (!et || !et.isTokenPocket) { showToast('请安装 TokenPocket', 'error'); return; }
+    pToUse = et; walletName = 'TokenPocket';
+  } else if (walletType === 'binance') {
+    if (!et || !et.isBinance) { showToast('请安装 Binance Web3', 'error'); return; }
+    pToUse = et; walletName = 'Binance Web3';
+  } else {
+    if (!et) { showToast('请先安装钱包插件', 'error'); return; }
+    pToUse = et; walletName = '钱包';
   }
+
+  doConnect(pToUse, walletName);
 }
 
-async function connectWallet() {
-  if (typeof window.ethereum === 'undefined') {
-    showToast('请安装 MetaMask 钱包', 'error');
-    return;
-  }
+function updateWalletStatus() {
+  const et = window.ethereum;
+  const okx = window.okxwallet;
+  const setStatus = (id, installed) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = installed ? '&#x2705; 已安装' : '未安装';
+  };
+  setStatus('ws-mm', et && et.isMetaMask);
+  setStatus('ws-okx', typeof okx !== 'undefined');
+  setStatus('ws-trust', et && et.isTrust);
+  setStatus('ws-tp', et && et.isTokenPocket);
+  setStatus('ws-bn', et && et.isBinance);
+  setStatus('ws-other', typeof et !== 'undefined');
+  document.querySelectorAll('.wallet-btn').forEach(b => {
+    const w = b.dataset.wallet;
+    const installedMap = {
+      metamask: et && et.isMetaMask, okx: typeof okx !== 'undefined',
+      trust: et && et.isTrust, tp: et && et.isTokenPocket,
+      binance: et && et.isBinance, injected: typeof et !== 'undefined'
+    };
+    if (!installedMap[w]) b.classList.add('disabled');
+    else b.classList.remove('disabled');
+  });
+}
+
+function closeWalletModal() { $('#walletModal').classList.remove('show'); }
+
+async function doConnect(pToUse, walletName) {
   try {
-    // Switch to BSC
-    const net = await window.ethereum.request({ method: 'eth_chainId' });
+    const net = await pToUse.request({ method: 'eth_chainId' });
     if (net !== '0x38') {
-      showToast('正在切换到 BSC 主网...', 'info');
-      const switched = await switchNetwork();
-      if (!switched) { showToast('请手动切换到 BSC 主网', 'error'); return; }
+      showToast('切换到 BSC 主网...', 'info');
+      try {
+        await pToUse.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x38' }] });
+      } catch(e) {
+        if (e.code === 4902) {
+          try {
+            await pToUse.request({ method: 'wallet_addEthereumChain', params: [{
+              chainId: '0x38', chainName: 'BNB Smart Chain',
+              nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+              rpcUrls: ['https://bsc-dataseed1.binance.org'],
+              blockExplorerUrls: ['https://bscscan.com']
+            }]});
+          } catch(e2) { showToast('请手动切换到 BSC 主网', 'error'); return; }
+        } else { showToast('请手动切换到 BSC 主网', 'error'); return; }
+      }
     }
-    provider = new ethers.BrowserProvider(window.ethereum);
+    provider = new ethers.BrowserProvider(pToUse);
     const accounts = await provider.send('eth_requestAccounts', []);
     account = accounts[0];
     signer = await provider.getSigner();
     contract = new ethers.Contract(CONFIG.contractAddress, ABI, signer);
-    const short = account.slice(0,6) + '...' + account.slice(-4);
-    #connectBtn.textContent = short;
-    #connectBtn.classList.add('connected');
-    #mintBtn.disabled = false;
-    #mintBtn.textContent = '铸造';
-    #chainDisplay.textContent = 'BSC 主网 ✅';
-    showToast('钱包已连接: ' + short, 'success');
+    const short = account.slice(0,6)+'...'+account.slice(-4);
+    $('#connectBtn').textContent = short;
+    $('#connectBtn').classList.add('connected');
+    $('#mintBtn').disabled = false;
+    $('#mintBtn').textContent = '铸造';
+    $('#chainDisplay').textContent = 'BSC 主网 &#x2705;';
+    showToast(walletName + ' 已连接: ' + short, 'success');
     loadCollectionInfo();
     loadUserTokens();
-    // Listen for changes
-    window.ethereum.on('accountsChanged', accts => {
+    pToUse.on('accountsChanged', accts => {
       if (accts.length === 0) disconnectWallet();
-      else { account = accts[0]; const s = account.slice(0,6)+'...'+account.slice(-4); #connectBtn.textContent = s; loadUserTokens(); }
+      else { account = accts[0]; $('#connectBtn').textContent = account.slice(0,6)+'...'+account.slice(-4); loadUserTokens(); }
     });
   } catch(e) {
-    if (e.code !== 'ACTION_REJECTED') {
-      showToast('连接失败: ' + (e.message?.slice(0,60) || '未知错误'), 'error');
-    }
+    if (e.code !== 'ACTION_REJECTED') showToast('连接失败', 'error');
   }
 }
 
 function disconnectWallet() {
   account = null; provider = null; signer = null; contract = null;
-  #connectBtn.textContent = '连接钱包';
-  #connectBtn.classList.remove('connected');
-  #mintBtn.disabled = true;
-  #mintBtn.textContent = '请先连接钱包';
+  $('#connectBtn').textContent = '连接钱包';
+  $('#connectBtn').classList.remove('connected');
+  $('#mintBtn').disabled = true;
+  $('#mintBtn').textContent = '请先连接钱包';
   updateDisplay(0, 0, '0', '--', '连接钱包加载信息...');
-  #galleryGrid.innerHTML = '<div class="gallery-empty">连接钱包后，藏品会显示在这里</div>';
-  #previewCard.innerHTML = '<div class="ph">连接钱包预览藏品</div>';
-  #progressFill.style.width = '0%';
-  #progressLabel.textContent = '0 / 0 已铸造';
-  #progressPct.textContent = '0%';
+  $('#galleryGrid').innerHTML = '<div class="gallery-empty">连接钱包后，藏品会显示在这里</div>';
+  $('#previewCard').innerHTML = '<div class="ph">连接钱包预览藏品</div>';
+  $('#progressFill').style.width = '0%';
+  $('#progressLabel').textContent = '0 / 0 已铸造';
+  $('#progressPct').textContent = '0%';
 }
 
 function updateDisplay(total, max, price, name, desc) {
-  #statTotal.textContent = max;
-  #statMinted.textContent = total;
-  #statPrice.textContent = price;
-  #mintPriceDisplay.textContent = price + ' BNB';
-  #collectionName.textContent = name || 'Chain Gems Genesis';
-  #collectionDesc.textContent = desc || '';
+  $('#statTotal').textContent = max;
+  $('#statMinted').textContent = total;
+  $('#statPrice').textContent = price;
+  $('#mintPriceDisplay').textContent = price + ' BNB';
+  $('#collectionName').textContent = name || 'Chain Gems Genesis';
+  $('#collectionDesc').textContent = desc || '';
   const pct = max > 0 ? (total / max * 100).toFixed(1) : 0;
-  #progressFill.style.width = Math.min(pct, 100) + '%';
-  #progressLabel.textContent = total + ' / ' + max + ' 已铸造';
-  #progressPct.textContent = pct + '%';
+  $('#progressFill').style.width = Math.min(pct, 100) + '%';
+  $('#progressLabel').textContent = total + ' / ' + max + ' 已铸造';
+  $('#progressPct').textContent = pct + '%';
   updateTotal();
 }
 
@@ -505,32 +465,21 @@ async function loadCollectionInfo() {
   if (!contract) return;
   try {
     const [total, max, price, name, desc] = await Promise.all([
-      contract.totalSupply(),
-      contract.maxSupply(),
-      contract.mintPrice(),
-      contract.projectName(),
-      contract.projectDescription()
+      contract.totalSupply(), contract.maxSupply(), contract.mintPrice(),
+      contract.projectName(), contract.projectDescription()
     ]);
     updateDisplay(total.toString(), max.toString(), ethers.formatEther(price), name, desc);
-  } catch(e) {
-    console.log('Load error:', e.message?.slice(0,60));
-  }
+  } catch(e) { console.log(e); }
 }
 
 async function loadUserTokens() {
   if (!contract || !account) return;
   try {
     const balance = await contract.balanceOf(account);
-    if (balance == 0) {
-      #galleryGrid.innerHTML = '<div class="gallery-empty">你还没有铸造任何 Chain Gems，点击上方开始铸造吧</div>';
-      return;
-    }
-    #galleryGrid.innerHTML = '<div class="gallery-loading">加载藏品中...</div>';
+    if (balance == 0) { $('#galleryGrid').innerHTML = '<div class="gallery-empty">还没有 Chain Gems，开始铸造吧</div>'; return; }
+    $('#galleryGrid').innerHTML = '<div class="gallery-loading">加载中...</div>';
     const ids = [];
-    for (let i = 0; i < balance; i++) {
-      const id = await contract.tokenOfOwnerByIndex(account, i);
-      ids.push(id.toString());
-    }
+    for (let i = 0; i < balance; i++) ids.push((await contract.tokenOfOwnerByIndex(account, i)).toString());
     let html = '';
     for (const id of ids) {
       try {
@@ -540,7 +489,7 @@ async function loadUserTokens() {
         html += '<div class="gallery-item" onclick="showPreviewById('+id+')"><div class="thumb">'+svg+'</div><div class="info">#'+id+'</div></div>';
       } catch(e) { continue; }
     }
-    #galleryGrid.innerHTML = html || '<div class="gallery-empty">加载失败</div>';
+    $('#galleryGrid').innerHTML = html || '<div class="gallery-empty">加载失败</div>';
   } catch(e) { console.log(e); }
 }
 
@@ -548,88 +497,59 @@ async function showPreview(tokenId) {
   if (!contract) return;
   try {
     const uri = await contract.tokenURI(tokenId);
-    const json = JSON.parse(atob(uri.split(',')[1]));
-    const svg = atob(json.image.split(',')[1]);
-    #previewCard.innerHTML = svg;
+    const svg = atob(JSON.parse(atob(uri.split(',')[1])).image.split(',')[1]);
+    $('#previewCard').innerHTML = svg;
   } catch(e) {}
 }
-async function showPreviewById(id) { await showPreview(id); }
+function showPreviewById(id) { showPreview(id); }
 
 function updateTotal() {
-  const p = parseFloat(#mintPriceDisplay.textContent) || 0;
-  const total = (p * mintQty).toFixed(6);
-  #totalDisplay.textContent = total.toString() + ' BNB';
+  const p = parseFloat($('#mintPriceDisplay').textContent) || 0;
+  $('#totalDisplay').textContent = (p * mintQty).toFixed(6) + ' BNB';
 }
 
-// Quantity controls
-#qtyDec.addEventListener('click', () => {
-  if (mintQty > 1) { mintQty--; #mintQty.textContent = mintQty; updateTotal(); }
-});
-#qtyInc.addEventListener('click', () => {
-  if (mintQty < 5) { mintQty++; #mintQty.textContent = mintQty; updateTotal(); }
-});
+$('#qtyDec').addEventListener('click', () => { if (mintQty > 1) { mintQty--; $('#mintQty').textContent = mintQty; updateTotal(); } });
+$('#qtyInc').addEventListener('click', () => { if (mintQty < 5) { mintQty++; $('#mintQty').textContent = mintQty; updateTotal(); } });
 
-// Mint button
-#mintBtn.addEventListener('click', async () => {
-  if (!contract || !account) { await connectWallet(); return; }
-  const status = #mintStatus;
+$('#mintBtn').addEventListener('click', async () => {
+  if (!contract || !account) { connectWallet(); return; }
+  const status = $('#mintStatus');
   status.className = 'mint-status';
   status.textContent = '交易发送中...';
-  #mintBtn.disabled = true;
-  #mintBtn.classList.add('loading');
+  $('#mintBtn').disabled = true; $('#mintBtn').classList.add('loading');
   try {
     const price = await contract.mintPrice();
-    const totalWei = price * BigInt(mintQty);
-    status.textContent = '请在 MetaMask 中确认...';
-    const tx = await contract.mint(mintQty, { value: totalWei });
+    const tx = await contract.mint(mintQty, { value: price * BigInt(mintQty) });
     status.textContent = '等待链上确认...';
     const receipt = await tx.wait();
     if (receipt.status === 1) {
-      status.textContent = '✅ 铸造成功! Tx: ' + tx.hash.slice(0,10) + '...' + tx.hash.slice(-6);
+      status.textContent = '&#x2705; 铸造成功!';
       status.className = 'mint-status success';
-      showToast('🎉 成功铸造 ' + mintQty + ' 枚 Chain Gem!', 'success');
-      loadCollectionInfo();
-      loadUserTokens();
-      // Try to preview the latest token
+      showToast('&#x1F389; 成功铸造 ' + mintQty + ' 枚 Gem!', 'success');
+      loadCollectionInfo(); loadUserTokens();
       try {
         const bal = await contract.balanceOf(account);
-        if (bal > 0) {
-          const lastId = await contract.tokenOfOwnerByIndex(account, bal - 1n);
-          showPreview(lastId);
-        }
+        if (bal > 0) showPreview(await contract.tokenOfOwnerByIndex(account, bal - 1n));
       } catch(e) {}
-    } else {
-      status.textContent = '交易失败';
-      status.className = 'mint-status error';
-    }
+    } else { status.textContent = '交易失败'; status.className = 'mint-status error'; }
   } catch(e) {
-    if (e.code === 'ACTION_REJECTED') {
-      status.textContent = '交易已取消';
-      status.className = 'mint-status';
-    } else {
-      status.textContent = '铸造失败: ' + (e.message?.slice(0,50) || e.code || '未知错误');
-      status.className = 'mint-status error';
-    }
+    if (e.code === 'ACTION_REJECTED') { status.textContent = '已取消'; status.className = 'mint-status'; }
+    else { status.textContent = '失败: ' + (e.message?.slice(0,50)||'未知'); status.className = 'mint-status error'; }
   }
-  #mintBtn.disabled = false;
-  #mintBtn.classList.remove('loading');
+  $('#mintBtn').disabled = false; $('#mintBtn').classList.remove('loading');
 });
 
-// Connect button
-#connectBtn.addEventListener('click', () => {
+$('#connectBtn').addEventListener('click', () => {
   if (account) { if (confirm('断开钱包连接？')) disconnectWallet(); return; }
   connectWallet();
 });
 
-// Auto-connect
 if (typeof window.ethereum !== 'undefined') {
   window.ethereum.request({ method: 'eth_accounts' }).then(accts => {
     if (accts.length > 0) connectWallet();
   }).catch(() => {});
-  // Listen for chain changes
   window.ethereum.on('chainChanged', () => { if (account) setTimeout(loadCollectionInfo, 1000); });
 }
 </script>
-
 </body>
 </html>
