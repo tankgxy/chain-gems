@@ -130,6 +130,9 @@ footer .links a:hover{color:var(--accent2)}
 .wallet-btn .w-status{font-size:10px;color:var(--text3)}
 .wallet-btn.disabled{opacity:.4;cursor:not-allowed}
 .wallet-btn.disabled:hover{border-color:var(--border);background:var(--bg3)}
+.wc-row{display:flex;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+.wc-row .wallet-btn{flex-direction:row;justify-content:center;padding:10px 12px;flex:1}
+.wc-row .wallet-btn .w-icon{width:28px;height:28px;font-size:11px}
 .modal-close{text-align:center;margin-top:14px}
 .modal-close button{background:none;border:none;color:var(--text3);font-size:12px;cursor:pointer;font-family:var(--font)}
 .modal-close button:hover{color:var(--text2)}
@@ -174,7 +177,7 @@ footer .links a:hover{color:var(--accent2)}
 <div class="container">
   <div class="hero-badge">&#9670; 已部署 BSC 主网</div>
   <h1>链上生成的<br><span class="grad">数字宝石</span></h1>
-  <p>500 枚独一无二的生成式几何艺术 NFT，所有元数据和图像完全链上存储。每个 NFT 的 SVG 由 Solidity 合约实时生成，永不改变。</p>
+  <p>500 枚独一无二的生成式几何艺术 NFT，所有元数据和图像完全链上存储。</p>
   <div class="hero-actions">
     <button class="btn-primary" onclick="document.getElementById('mint').scrollIntoView({behavior:'smooth'})">立即铸造</button>
     <a href="https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank"><button class="btn-secondary">BSCscan 查看</button></a>
@@ -194,11 +197,11 @@ footer .links a:hover{color:var(--accent2)}
 <section id="about">
 <div class="container">
   <h2 class="section-title">什么是 Chain Gems？</h2>
-  <p class="section-sub">一个完全链上的生成艺术 NFT 项目。几何图案、颜色、属性全部由合约在链上实时生成，不依赖任何外部存储。</p>
+  <p class="section-sub">一个完全链上的生成艺术 NFT 项目，几何图案和颜色全部由合约在链上实时生成。</p>
   <div class="about-grid">
-    <div class="about-card"><div class="icon">&#x1F4E6;</div><h3>完全链上</h3><p>元数据和 SVG 图像由 Solidity 合约实时生成，Base64 编码直接返回，零外部依赖，永久存于 BSC。</p></div>
-    <div class="about-card"><div class="icon">&#x2728;</div><h3>生成式艺术</h3><p>6 种几何形态 × 10 种配色 × 10 种背景，配合可变的装饰环和点缀点，每枚都是独一无二的艺术品。</p></div>
-    <div class="about-card"><div class="icon">&#x1F3B2;</div><h3>稀有属性</h3><p>每枚 NFT 包含 4 个属性维度（背景、形状、强调色、环大小），通过链上随机种子在铸造时确定。</p></div>
+    <div class="about-card"><div class="icon">&#x1F4E6;</div><h3>完全链上</h3><p>元数据和 SVG 图像由合约实时生成，Base64 编码直接返回，零外部依赖，永久存于 BSC。</p></div>
+    <div class="about-card"><div class="icon">&#x2728;</div><h3>生成式艺术</h3><p>6 种几何形态 x 10 种配色 x 10 种背景，配合可变的装饰环和点缀点，每枚独一无二。</p></div>
+    <div class="about-card"><div class="icon">&#x1F3B2;</div><h3>稀有属性</h3><p>每枚 NFT 包含 4 个属性维度，通过链上随机种子在铸造时确定，永远不可篡改。</p></div>
     <div class="about-card"><div class="icon">&#x1F4B0;</div><h3>创造者版税</h3><p>二级市场交易自动收取 5% 版税，持续为创作者产生收益。</p></div>
   </div>
 </div>
@@ -207,7 +210,7 @@ footer .links a:hover{color:var(--accent2)}
 <section id="mint">
 <div class="container">
   <h2 class="section-title">铸造你的宝石</h2>
-  <p class="section-sub">连接钱包，选择数量，点击铸造。每个独一无二的 Chain Gem 将立即属于你。</p>
+  <p class="section-sub">连接钱包，选择数量，点击铸造。</p>
   <div class="preview-section">
     <div class="preview-card" id="previewCard"><div class="ph" id="previewPlaceholder">连接钱包预览藏品</div></div>
     <div class="preview-info">
@@ -242,13 +245,13 @@ footer .links a:hover{color:var(--accent2)}
 <section id="features">
 <div class="container">
   <h2 class="section-title">为什么选择 Chain Gems？</h2>
-  <p class="section-sub">不只是 JPG。真正的链上艺术，真正的所有权。</p>
+  <p class="section-sub">不只是 JPG，真正的链上艺术。</p>
   <div class="features-grid">
-    <div class="feature"><div class="fi">&#x1F5C4;</div><div><h4>永不消失</h4><p>只要 BSC 存在，你的 NFT 就存在。SVG 和元数据由合约直接生成，不依赖 IPFS、AWS 或任何外部服务。</p></div></div>
-    <div class="feature"><div class="fi">&#x1F3A8;</div><div><h4>独特美学</h4><p>几何抽象风格，6 种形状（轨道、六边形、钻石、星形、花朵、波浪）× 10 种高级配色。</p></div></div>
-    <div class="feature"><div class="fi">&#x26A1;</div><div><h4>低 Gas 成本</h4><p>部署在 BSC，铸造 Gas 费仅需 $0.01-0.03，远低于以太坊主网。人人可参与。</p></div></div>
-    <div class="feature"><div class="fi">&#x1F511;</div><div><h4>真正拥有</h4><p>私钥即所有权。没有人可以修改、删除或冻结你的资产。代码即法律。</p></div></div>
-    <div class="feature"><div class="fi">&#x1F4C8;</div><div><h4>有限供应</h4><p>仅 500 枚，永不增发。稀缺性是价值的基石。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F5C4;</div><div><h4>永不消失</h4><p>只要 BSC 存在，NFT 就存在。SVG 由合约直接生成，不依赖任何外部服务。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F3A8;</div><div><h4>独特美学</h4><p>几何抽象风格，6 种形状 x 10 种高级配色，每枚都是独特艺术品。</p></div></div>
+    <div class="feature"><div class="fi">&#x26A1;</div><div><h4>低 Gas 成本</h4><p>部署在 BSC，铸造 Gas 费仅需 $0.01-0.03，人人可参与。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F511;</div><div><h4>真正拥有</h4><p>私钥即所有权，没有人可以修改、删除或冻结你的资产。</p></div></div>
+    <div class="feature"><div class="fi">&#x1F4C8;</div><div><h4>有限供应</h4><p>仅 500 枚，永不增发，稀缺性是价值的基石。</p></div></div>
     <div class="feature"><div class="fi">&#x1F30D;</div><div><h4>OpenSea 即用</h4><p>兼容 ERC-721，自动在 OpenSea 显示，可直接上架交易。</p></div></div>
   </div>
 </div>
@@ -259,16 +262,15 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">如何铸造</h2>
   <p class="section-sub">三步即可拥有你的第一枚 Chain Gem。</p>
   <div class="steps">
-    <div class="step"><div class="num">1</div><h4>选择钱包</h4><p>安装 MetaMask、OKX Wallet、Trust Wallet、TokenPocket 或 Binance Web3 钱包，确保有少量 BNB 作为 Gas 费。</p></div>
-    <div class="step"><div class="num">2</div><h4>连接钱包</h4><p>点击右上角「连接钱包」，选择你的钱包授权连接。页面会自动切换到 BSC 主网。单次最多铸造 5 枚。</p></div>
-    <div class="step"><div class="num">3</div><h4>铸造并查看</h4><p>点击「铸造」，在钱包中确认交易。完成后你的 NFT 会出现在下方画廊中，可在 OpenSea 上交易。</p></div>
+    <div class="step"><div class="num">1</div><h4>安装钱包</h4><p>安装 MetaMask、OKX Wallet、Trust Wallet、TokenPocket、Coinbase、Rabby 或 Binance Web3 钱包插件，确保有少量 BNB 作为 Gas 费。</p></div>
+    <div class="step"><div class="num">2</div><h4>连接钱包</h4><p>点击右上角「连接钱包」，从列表中选择你的钱包。页面会自动切换到 BSC 主网。每地址最多铸造 5 枚。</p></div>
+    <div class="step"><div class="num">3</div><h4>铸造并查看</h4><p>点击「铸造」，在钱包中确认交易。完成后你的 NFT 会出现在下方画廊中，可在 OpenSea 交易。</p></div>
   </div>
   <div class="contract-info">
     <div>合约地址</div>
     <div class="addr" onclick="navigator.clipboard.writeText('0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5');showToast('&#x2705; 已复制合约地址','success')">0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5</div>
     <div style="margin-top:8px;font-size:11px;color:var(--text3)">
-      <a href="https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">BSCscan ↗</a>
-      &nbsp;&middot;&nbsp;
+      <a href="https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">BSCscan ↗</a> &middot;
       <a href="https://opensea.io/zh-CN/assets/bsc/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5" target="_blank">OpenSea ↗</a>
     </div>
   </div>
@@ -288,267 +290,227 @@ footer .links a:hover{color:var(--accent2)}
 
 <div class="toast" id="toast"></div>
 
-<!-- Wallet Selection Modal -->
+<!-- Wallet Modal -->
 <div class="modal-overlay" id="walletModal">
 <div class="modal-box">
   <h3>选择钱包</h3>
   <div class="wallet-grid">
-    <div class="wallet-btn" data-wallet="metamask" onclick="connectWallet('metamask')"><div class="w-icon" style="background:#f6851b;color:#fff;border-radius:8px">M</div><div class="w-name">MetaMask</div><div class="w-status" id="ws-mm">检测中...</div></div>
-    <div class="wallet-btn" data-wallet="okx" onclick="connectWallet('okx')"><div class="w-icon" style="background:#000;color:#fff;border-radius:8px">OKX</div><div class="w-name">OKX Wallet</div><div class="w-status" id="ws-okx">检测中...</div></div>
-    <div class="wallet-btn" data-wallet="trust" onclick="connectWallet('trust')"><div class="w-icon" style="background:#3375bb;color:#fff;border-radius:8px">T</div><div class="w-name">Trust Wallet</div><div class="w-status" id="ws-trust">检测中...</div></div>
-    <div class="wallet-btn" data-wallet="tp" onclick="connectWallet('tp')"><div class="w-icon" style="background:#1d2129;color:#fecc2f;border-radius:8px">TP</div><div class="w-name">TokenPocket</div><div class="w-status" id="ws-tp">检测中...</div></div>
-    <div class="wallet-btn" data-wallet="binance" onclick="connectWallet('binance')"><div class="w-icon" style="background:#f0b90b;color:#1e2329;border-radius:8px">B</div><div class="w-name">Binance Web3</div><div class="w-status" id="ws-bn">检测中...</div></div>
-    <div class="wallet-btn" data-wallet="injected" onclick="connectWallet('injected')"><div class="w-icon" style="background:linear-gradient(135deg,var(--accent),var(--green));color:#fff;border-radius:8px">+</div><div class="w-name">其他钱包</div><div class="w-status" id="ws-other">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="metamask" onclick="connectWallet('metamask')"><div class="w-icon" style="background:#f6851b;color:#fff">M</div><div class="w-name">MetaMask</div><div class="w-status" id="ws-mm">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="okx" onclick="connectWallet('okx')"><div class="w-icon" style="background:#000;color:#fff">OKX</div><div class="w-name">OKX Wallet</div><div class="w-status" id="ws-okx">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="trust" onclick="connectWallet('trust')"><div class="w-icon" style="background:#3375bb;color:#fff">T</div><div class="w-name">Trust Wallet</div><div class="w-status" id="ws-trust">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="tp" onclick="connectWallet('tp')"><div class="w-icon" style="background:#1d2129;color:#fecc2f">TP</div><div class="w-name">TokenPocket</div><div class="w-status" id="ws-tp">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="coinbase" onclick="connectWallet('coinbase')"><div class="w-icon" style="background:#0052ff;color:#fff">C</div><div class="w-name">Coinbase</div><div class="w-status" id="ws-cb">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="rabby" onclick="connectWallet('rabby')"><div class="w-icon" style="background:#8697ff;color:#fff">R</div><div class="w-name">Rabby</div><div class="w-status" id="ws-rb">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="binance" onclick="connectWallet('binance')"><div class="w-icon" style="background:#f0b90b;color:#1e2329">B</div><div class="w-name">Binance Web3</div><div class="w-status" id="ws-bn">检测中...</div></div>
+    <div class="wallet-btn" data-wallet="injected" onclick="connectWallet('injected')"><div class="w-icon" style="background:#7c5cfc;color:#fff">+</div><div class="w-name">其他插件</div><div class="w-status" id="ws-other">检测中...</div></div>
+  </div>
+  <div class="wc-row">
+    <div class="wallet-btn" data-wallet="wc" onclick="connectWallet('wc')">
+      <div class="w-icon" style="background:#3b99fc;color:#fff;width:28px;height:28px;font-size:11px">WC</div>
+      <div class="w-name" style="font-size:13px;font-weight:700">WalletConnect</div>
+      <div style="font-size:10px;color:var(--text3);margin-left:auto">QR 扫码连接</div>
+    </div>
   </div>
   <div class="modal-close"><button onclick="closeWalletModal()">取消</button></div>
 </div>
 </div>
 <script>
-const CONFIG = {
-  contractAddress: "0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5",
-  chainId: 56,
-  chainName: "BNB Smart Chain",
-  rpcUrl: "https://bsc-dataseed1.binance.org",
-  explorerUrl: "https://bscscan.com",
-};
-const ABI = [
-  "function totalSupply() view returns (uint256)","function maxSupply() view returns (uint256)",
-  "function mintPrice() view returns (uint256)","function projectName() view returns (string)",
-  "function projectDescription() view returns (string)","function totalMinted() view returns (uint256)",
-  "function balanceOf(address owner) view returns (uint256)",
-  "function tokenOfOwnerByIndex(address owner, uint256 index) view returns (uint256)",
-  "function tokenURI(uint256 tokenId) view returns (string)","function mint(uint256 quantity) payable",
-  "function maxPerWallet() view returns (uint256)",
-  "event Minted(address indexed minter, uint256 indexed tokenId, uint256 timestamp)"
-];
-let provider, signer, contract, account;
-let mintQty = 1;
-const $ = s => document.querySelector(s);
+var CONFIG={contractAddress:"0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5",chainId:56,chainName:"BNB Smart Chain",rpcUrl:"https://bsc-dataseed1.binance.org",explorerUrl:"https://bscscan.com"};
+var ABI=["function totalSupply() view returns (uint256)","function maxSupply() view returns (uint256)","function mintPrice() view returns (uint256)","function projectName() view returns (string)","function projectDescription() view returns (string)","function totalMinted() view returns (uint256)","function balanceOf(address owner) view returns (uint256)","function tokenOfOwnerByIndex(address owner,uint256 index) view returns (uint256)","function tokenURI(uint256 tokenId) view returns (string)","function mint(uint256 quantity) payable","function maxPerWallet() view returns (uint256)","event Minted(address indexed minter,uint256 indexed tokenId,uint256 timestamp)"];
+var provider,signer,contract,account,mintQty=1;
+var $=function(s){return document.querySelector(s)};
 
-function showToast(msg, type) {
-  const t = $('#toast');
-  t.textContent = msg; t.className = 'toast ' + type + ' show';
-  clearTimeout(t._hide);
-  t._hide = setTimeout(() => t.classList.remove('show'), 3500);
-}
+function showToast(m,t){var e=$("#toast");e.textContent=m;e.className="toast "+t+" show";clearTimeout(e._hide);e._hide=setTimeout(function(){e.classList.remove("show")},3500)}
 
-function connectWallet(walletType) {
-  if (!walletType) { updateWalletStatus(); $('#walletModal').classList.add('show'); return; }
-  $('#walletModal').classList.remove('show');
-
-  let pToUse, walletName;
-  const et = window.ethereum;
-  const has = (x) => typeof x !== 'undefined' && x;
-
-  if (walletType === 'metamask') {
-    if (!et || !et.isMetaMask) { showToast('请安装 MetaMask', 'error'); return; }
-    pToUse = et; walletName = 'MetaMask';
-  } else if (walletType === 'okx') {
-    if (typeof window.okxwallet === 'undefined') { showToast('请安装 OKX Wallet', 'error'); return; }
-    pToUse = window.okxwallet; walletName = 'OKX Wallet';
-  } else if (walletType === 'trust') {
-    if (!et || !et.isTrust) { showToast('请安装 Trust Wallet', 'error'); return; }
-    pToUse = et; walletName = 'Trust Wallet';
-  } else if (walletType === 'tp') {
-    if (!et || !et.isTokenPocket) { showToast('请安装 TokenPocket', 'error'); return; }
-    pToUse = et; walletName = 'TokenPocket';
-  } else if (walletType === 'binance') {
-    if (!et || !et.isBinance) { showToast('请安装 Binance Web3', 'error'); return; }
-    pToUse = et; walletName = 'Binance Web3';
-  } else {
-    if (!et) { showToast('请先安装钱包插件', 'error'); return; }
-    pToUse = et; walletName = '钱包';
-  }
-
-  doConnect(pToUse, walletName);
-}
-
-function updateWalletStatus() {
-  const et = window.ethereum;
-  const okx = window.okxwallet;
-  const setStatus = (id, installed) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = installed ? '&#x2705; 已安装' : '未安装';
+// Wallet selection
+function connectWallet(t){
+  if(!t){updateWalletStatus();$("#walletModal").classList.add("show");return}
+  $("#walletModal").classList.remove("show");
+  if(t==="wc"){connectWC();return}
+  var e=window.ethereum,o=window.okxwallet;
+  var m={
+    metamask:{p:e,ok:e&&e.isMetaMask,n:"MetaMask"},
+    okx:{p:o,ok:o!==void 0,n:"OKX Wallet"},
+    trust:{p:e,ok:e&&e.isTrust,n:"Trust Wallet"},
+    tp:{p:e,ok:e&&e.isTokenPocket,n:"TokenPocket"},
+    coinbase:{p:e,ok:e&&e.isCoinbaseWallet,n:"Coinbase"},
+    rabby:{p:e,ok:e&&e.isRabby,n:"Rabby"},
+    binance:{p:e,ok:e&&e.isBinance,n:"Binance Web3"},
+    injected:{p:e,ok:e!==void 0,n:"插件钱包"}
   };
-  setStatus('ws-mm', et && et.isMetaMask);
-  setStatus('ws-okx', typeof okx !== 'undefined');
-  setStatus('ws-trust', et && et.isTrust);
-  setStatus('ws-tp', et && et.isTokenPocket);
-  setStatus('ws-bn', et && et.isBinance);
-  setStatus('ws-other', typeof et !== 'undefined');
-  document.querySelectorAll('.wallet-btn').forEach(b => {
-    const w = b.dataset.wallet;
-    const installedMap = {
-      metamask: et && et.isMetaMask, okx: typeof okx !== 'undefined',
-      trust: et && et.isTrust, tp: et && et.isTokenPocket,
-      binance: et && et.isBinance, injected: typeof et !== 'undefined'
-    };
-    if (!installedMap[w]) b.classList.add('disabled');
-    else b.classList.remove('disabled');
+  var w=m[t];
+  if(!w||!w.ok){showToast("请安装 "+(w?w.n:"钱包")+" 插件","error");return}
+  doConnect(w.p,w.n);
+}
+
+function updateWalletStatus(){
+  var e=window.ethereum,o=window.okxwallet;
+  var s=function(id,ok){var el=document.getElementById(id);if(el)el.textContent=ok?"&#x2705; 已安装":"未安装"};
+  s("ws-mm",e&&e.isMetaMask);s("ws-okx",o!==void 0);
+  s("ws-trust",e&&e.isTrust);s("ws-tp",e&&e.isTokenPocket);
+  s("ws-cb",e&&e.isCoinbaseWallet);s("ws-rb",e&&e.isRabby);
+  s("ws-bn",e&&e.isBinance);s("ws-other",e!==void 0);
+  document.querySelectorAll(".wallet-btn").forEach(function(b){
+    var w=b.dataset.wallet;
+    if(w==="wc"){b.classList.remove("disabled");return}
+    var m={metamask:e&&e.isMetaMask,okx:o!==void 0,trust:e&&e.isTrust,tp:e&&e.isTokenPocket,coinbase:e&&e.isCoinbaseWallet,rabby:e&&e.isRabby,binance:e&&e.isBinance,injected:e!==void 0};
+    if(!m[w])b.classList.add("disabled");else b.classList.remove("disabled");
   });
 }
 
-function closeWalletModal() { $('#walletModal').classList.remove('show'); }
+function closeWalletModal(){$("#walletModal").classList.remove("show")}
 
-async function doConnect(pToUse, walletName) {
-  try {
-    const net = await pToUse.request({ method: 'eth_chainId' });
-    if (net !== '0x38') {
-      showToast('切换到 BSC 主网...', 'info');
-      try {
-        await pToUse.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x38' }] });
-      } catch(e) {
-        if (e.code === 4902) {
-          try {
-            await pToUse.request({ method: 'wallet_addEthereumChain', params: [{
-              chainId: '0x38', chainName: 'BNB Smart Chain',
-              nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
-              rpcUrls: ['https://bsc-dataseed1.binance.org'],
-              blockExplorerUrls: ['https://bscscan.com']
-            }]});
-          } catch(e2) { showToast('请手动切换到 BSC 主网', 'error'); return; }
-        } else { showToast('请手动切换到 BSC 主网', 'error'); return; }
+// WalletConnect
+async function connectWC(){
+  showToast("启动 WalletConnect...","info");
+  try{
+    var s=document.createElement("script");
+    s.src="https://cdn.jsdelivr.net/npm/@walletconnect/ethereum-provider@2.16.1/dist/umd/index.min.js";
+    await new Promise(function(r,e){s.onload=r;s.onerror=e;document.head.appendChild(s)});
+    var p=await WalletConnectEthereumProvider.init({
+      projectId:"8f2a5b7b7b7b7b7b7b7b7b7b7b7b7b7b",
+      chains:[56],showQrModal:true,
+      rpcMap:{56:"https://bsc-dataseed1.binance.org"},
+      methods:["eth_sendTransaction","eth_sign","personal_sign","eth_signTypedData"],
+      events:["chainChanged","accountsChanged"]
+    });
+    await p.enable();
+    doConnect(p,"WalletConnect");
+  }catch(e){console.error(e);showToast("WalletConnect 连接失败","error")}
+}
+
+// Core connection
+async function doConnect(pToUse,walletName){
+  try{
+    var net=await pToUse.request({method:"eth_chainId"});
+    if(net!=="0x38"){
+      showToast("切换到 BSC 主网...","info");
+      try{await pToUse.request({method:"wallet_switchEthereumChain",params:[{chainId:"0x38"}]})}
+      catch(e){
+        if(e.code===4902){
+          try{await pToUse.request({method:"wallet_addEthereumChain",params:[{chainId:"0x38",chainName:"BNB Smart Chain",nativeCurrency:{name:"BNB",symbol:"BNB",decimals:18},rpcUrls:["https://bsc-dataseed1.binance.org"],blockExplorerUrls:["https://bscscan.com"]}]})}
+          catch(e2){showToast("请手动切换到 BSC 主网","error");return}
+        }else{showToast("请手动切换到 BSC 主网","error");return}
       }
     }
-    provider = new ethers.BrowserProvider(pToUse);
-    const accounts = await provider.send('eth_requestAccounts', []);
-    account = accounts[0];
-    signer = await provider.getSigner();
-    contract = new ethers.Contract(CONFIG.contractAddress, ABI, signer);
-    const short = account.slice(0,6)+'...'+account.slice(-4);
-    $('#connectBtn').textContent = short;
-    $('#connectBtn').classList.add('connected');
-    $('#mintBtn').disabled = false;
-    $('#mintBtn').textContent = '铸造';
-    $('#chainDisplay').textContent = 'BSC 主网 &#x2705;';
-    showToast(walletName + ' 已连接: ' + short, 'success');
-    loadCollectionInfo();
-    loadUserTokens();
-    pToUse.on('accountsChanged', accts => {
-      if (accts.length === 0) disconnectWallet();
-      else { account = accts[0]; $('#connectBtn').textContent = account.slice(0,6)+'...'+account.slice(-4); loadUserTokens(); }
+    provider=new ethers.BrowserProvider(pToUse);
+    var accounts=await provider.send("eth_requestAccounts",[]);
+    account=accounts[0];
+    signer=await provider.getSigner();
+    contract=new ethers.Contract(CONFIG.contractAddress,ABI,signer);
+    var short=account.slice(0,6)+"..."+account.slice(-4);
+    $("#connectBtn").textContent=short;
+    $("#connectBtn").classList.add("connected");
+    $("#mintBtn").disabled=false;
+    $("#mintBtn").textContent="铸造";
+    $("#chainDisplay").textContent="BSC 主网 &#x2705;";
+    showToast(walletName+" 已连接: "+short,"success");
+    loadCollectionInfo();loadUserTokens();
+    pToUse.on("accountsChanged",function(accts){
+      if(accts.length===0)disconnectWallet();
+      else{account=accts[0];$("#connectBtn").textContent=account.slice(0,6)+"..."+account.slice(-4);loadUserTokens()}
     });
-  } catch(e) {
-    if (e.code !== 'ACTION_REJECTED') showToast('连接失败', 'error');
-  }
+  }catch(e){if(e.code!=="ACTION_REJECTED")showToast("连接失败","error")}
 }
 
-function disconnectWallet() {
-  account = null; provider = null; signer = null; contract = null;
-  $('#connectBtn').textContent = '连接钱包';
-  $('#connectBtn').classList.remove('connected');
-  $('#mintBtn').disabled = true;
-  $('#mintBtn').textContent = '请先连接钱包';
-  updateDisplay(0, 0, '0', '--', '连接钱包加载信息...');
-  $('#galleryGrid').innerHTML = '<div class="gallery-empty">连接钱包后，藏品会显示在这里</div>';
-  $('#previewCard').innerHTML = '<div class="ph">连接钱包预览藏品</div>';
-  $('#progressFill').style.width = '0%';
-  $('#progressLabel').textContent = '0 / 0 已铸造';
-  $('#progressPct').textContent = '0%';
+function disconnectWallet(){
+  account=null;provider=null;signer=null;contract=null;
+  $("#connectBtn").textContent="连接钱包";
+  $("#connectBtn").classList.remove("connected");
+  $("#mintBtn").disabled=true;$("#mintBtn").textContent="请先连接钱包";
+  updateDisplay(0,0,"0","--","连接钱包加载信息...");
+  $("#galleryGrid").innerHTML="<div class=\"gallery-empty\">连接钱包后，藏品会显示在这里</div>";
+  $("#previewCard").innerHTML="<div class=\"ph\">连接钱包预览藏品</div>";
+  $("#progressFill").style.width="0%";
+  $("#progressLabel").textContent="0 / 0 已铸造";
+  $("#progressPct").textContent="0%";
 }
 
-function updateDisplay(total, max, price, name, desc) {
-  $('#statTotal').textContent = max;
-  $('#statMinted').textContent = total;
-  $('#statPrice').textContent = price;
-  $('#mintPriceDisplay').textContent = price + ' BNB';
-  $('#collectionName').textContent = name || 'Chain Gems Genesis';
-  $('#collectionDesc').textContent = desc || '';
-  const pct = max > 0 ? (total / max * 100).toFixed(1) : 0;
-  $('#progressFill').style.width = Math.min(pct, 100) + '%';
-  $('#progressLabel').textContent = total + ' / ' + max + ' 已铸造';
-  $('#progressPct').textContent = pct + '%';
+function updateDisplay(total,max,price,name,desc){
+  $("#statTotal").textContent=max;$("#statMinted").textContent=total;$("#statPrice").textContent=price;
+  $("#mintPriceDisplay").textContent=price+" BNB";
+  $("#collectionName").textContent=name||"Chain Gems Genesis";
+  $("#collectionDesc").textContent=desc||"";
+  var pct=max>0?(total/max*100).toFixed(1):0;
+  $("#progressFill").style.width=Math.min(pct,100)+"%";
+  $("#progressLabel").textContent=total+" / "+max+" 已铸造";
+  $("#progressPct").textContent=pct+"%";
   updateTotal();
 }
 
-async function loadCollectionInfo() {
-  if (!contract) return;
-  try {
-    const [total, max, price, name, desc] = await Promise.all([
-      contract.totalSupply(), contract.maxSupply(), contract.mintPrice(),
-      contract.projectName(), contract.projectDescription()
-    ]);
-    updateDisplay(total.toString(), max.toString(), ethers.formatEther(price), name, desc);
-  } catch(e) { console.log(e); }
+async function loadCollectionInfo(){
+  if(!contract)return;
+  try{
+    var r=await Promise.all([contract.totalSupply(),contract.maxSupply(),contract.mintPrice(),contract.projectName(),contract.projectDescription()]);
+    updateDisplay(r[0].toString(),r[1].toString(),ethers.formatEther(r[2]),r[3],r[4])
+  }catch(e){}
 }
 
-async function loadUserTokens() {
-  if (!contract || !account) return;
-  try {
-    const balance = await contract.balanceOf(account);
-    if (balance == 0) { $('#galleryGrid').innerHTML = '<div class="gallery-empty">还没有 Chain Gems，开始铸造吧</div>'; return; }
-    $('#galleryGrid').innerHTML = '<div class="gallery-loading">加载中...</div>';
-    const ids = [];
-    for (let i = 0; i < balance; i++) ids.push((await contract.tokenOfOwnerByIndex(account, i)).toString());
-    let html = '';
-    for (const id of ids) {
-      try {
-        const uri = await contract.tokenURI(id);
-        const json = JSON.parse(atob(uri.split(',')[1]));
-        const svg = atob(json.image.split(',')[1]);
-        html += '<div class="gallery-item" onclick="showPreviewById('+id+')"><div class="thumb">'+svg+'</div><div class="info">#'+id+'</div></div>';
-      } catch(e) { continue; }
+async function loadUserTokens(){
+  if(!contract||!account)return;
+  try{
+    var bal=await contract.balanceOf(account);
+    if(bal==0){$("#galleryGrid").innerHTML="<div class=\"gallery-empty\">还没有 Chain Gems，开始铸造吧</div>";return}
+    $("#galleryGrid").innerHTML="<div class=\"gallery-loading\">加载中...</div>";
+    var ids=[];
+    for(var i=0;i<bal;i++)ids.push((await contract.tokenOfOwnerByIndex(account,i)).toString());
+    var html="";
+    for(var j=0;j<ids.length;j++){
+      try{
+        var uri=await contract.tokenURI(ids[j]);
+        var json=JSON.parse(atob(uri.split(",")[1]));
+        var svg=atob(json.image.split(",")[1]);
+        html+="<div class=\"gallery-item\" onclick=\"showPreviewById("+ids[j]+')\"><div class="thumb">'+svg+"</div><div class=\"info\">#"+ids[j]+"</div></div>"
+      }catch(e){}
     }
-    $('#galleryGrid').innerHTML = html || '<div class="gallery-empty">加载失败</div>';
-  } catch(e) { console.log(e); }
+    $("#galleryGrid").innerHTML=html||"<div class=\"gallery-empty\">加载失败</div>"
+  }catch(e){}
 }
 
-async function showPreview(tokenId) {
-  if (!contract) return;
-  try {
-    const uri = await contract.tokenURI(tokenId);
-    const svg = atob(JSON.parse(atob(uri.split(',')[1])).image.split(',')[1]);
-    $('#previewCard').innerHTML = svg;
-  } catch(e) {}
+async function showPreview(id){
+  if(!contract)return;
+  try{var uri=await contract.tokenURI(id);var svg=atob(JSON.parse(atob(uri.split(",")[1])).image.split(",")[1]);$("#previewCard").innerHTML=svg}catch(e){}
 }
-function showPreviewById(id) { showPreview(id); }
+function showPreviewById(id){showPreview(id)}
 
-function updateTotal() {
-  const p = parseFloat($('#mintPriceDisplay').textContent) || 0;
-  $('#totalDisplay').textContent = (p * mintQty).toFixed(6) + ' BNB';
+function updateTotal(){
+  var p=parseFloat($("#mintPriceDisplay").textContent)||0;
+  $("#totalDisplay").textContent=(p*mintQty).toFixed(6)+" BNB"
 }
 
-$('#qtyDec').addEventListener('click', () => { if (mintQty > 1) { mintQty--; $('#mintQty').textContent = mintQty; updateTotal(); } });
-$('#qtyInc').addEventListener('click', () => { if (mintQty < 5) { mintQty++; $('#mintQty').textContent = mintQty; updateTotal(); } });
+$("#qtyDec").addEventListener("click",function(){if(mintQty>1){mintQty--;$("#mintQty").textContent=mintQty;updateTotal()}});
+$("#qtyInc").addEventListener("click",function(){if(mintQty<5){mintQty++;$("#mintQty").textContent=mintQty;updateTotal()}});
 
-$('#mintBtn').addEventListener('click', async () => {
-  if (!contract || !account) { connectWallet(); return; }
-  const status = $('#mintStatus');
-  status.className = 'mint-status';
-  status.textContent = '交易发送中...';
-  $('#mintBtn').disabled = true; $('#mintBtn').classList.add('loading');
-  try {
-    const price = await contract.mintPrice();
-    const tx = await contract.mint(mintQty, { value: price * BigInt(mintQty) });
-    status.textContent = '等待链上确认...';
-    const receipt = await tx.wait();
-    if (receipt.status === 1) {
-      status.textContent = '&#x2705; 铸造成功!';
-      status.className = 'mint-status success';
-      showToast('&#x1F389; 成功铸造 ' + mintQty + ' 枚 Gem!', 'success');
-      loadCollectionInfo(); loadUserTokens();
-      try {
-        const bal = await contract.balanceOf(account);
-        if (bal > 0) showPreview(await contract.tokenOfOwnerByIndex(account, bal - 1n));
-      } catch(e) {}
-    } else { status.textContent = '交易失败'; status.className = 'mint-status error'; }
-  } catch(e) {
-    if (e.code === 'ACTION_REJECTED') { status.textContent = '已取消'; status.className = 'mint-status'; }
-    else { status.textContent = '失败: ' + (e.message?.slice(0,50)||'未知'); status.className = 'mint-status error'; }
+$("#mintBtn").addEventListener("click",async function(){
+  if(!contract||!account){connectWallet();return}
+  var st=$("#mintStatus");st.className="mint-status";st.textContent="交易发送中...";
+  $("#mintBtn").disabled=true;$("#mintBtn").classList.add("loading");
+  try{
+    var price=await contract.mintPrice();
+    var tx=await contract.mint(mintQty,{value:price*BigInt(mintQty)});
+    st.textContent="等待链上确认...";
+    var receipt=await tx.wait();
+    if(receipt.status===1){
+      st.textContent="&#x2705; 铸造成功!";st.className="mint-status success";
+      showToast("&#x1F389; 成功铸造 "+mintQty+" 枚 Gem!","success");
+      loadCollectionInfo();loadUserTokens();
+      try{var b=await contract.balanceOf(account);if(b>0)showPreview(await contract.tokenOfOwnerByIndex(account,b-1n))}catch(e){}
+    }else{st.textContent="交易失败";st.className="mint-status error"}
+  }catch(e){
+    if(e.code==="ACTION_REJECTED"){st.textContent="已取消";st.className="mint-status"}
+    else{st.textContent="失败: "+(e.message?.slice(0,50)||"未知");st.className="mint-status error"}
   }
-  $('#mintBtn').disabled = false; $('#mintBtn').classList.remove('loading');
+  $("#mintBtn").disabled=false;$("#mintBtn").classList.remove("loading")
 });
 
-$('#connectBtn').addEventListener('click', () => {
-  if (account) { if (confirm('断开钱包连接？')) disconnectWallet(); return; }
-  connectWallet();
+$("#connectBtn").addEventListener("click",function(){
+  if(account){if(confirm("断开钱包连接？"))disconnectWallet();return}
+  connectWallet()
 });
 
-if (typeof window.ethereum !== 'undefined') {
-  window.ethereum.request({ method: 'eth_accounts' }).then(accts => {
-    if (accts.length > 0) connectWallet();
-  }).catch(() => {});
-  window.ethereum.on('chainChanged', () => { if (account) setTimeout(loadCollectionInfo, 1000); });
+if(typeof window.ethereum!=="undefined"){
+  window.ethereum.request({method:"eth_accounts"}).then(function(a){if(a.length>0)connectWallet()}).catch(function(){});
+  window.ethereum.on("chainChanged",function(){if(account)setTimeout(loadCollectionInfo,1000)})
 }
 </script>
 </body>
