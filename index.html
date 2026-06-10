@@ -306,7 +306,16 @@ window.__providers = {};
     }
   });
   window.dispatchEvent(new Event('eip6963:requestProvider'));
-  setTimeout(function() { window.dispatchEvent(new Event('eip6963:requestProvider')); }, 300);
+  setTimeout(function() { window.dispatchEvent(new Event('eip6963:requestProvider')); }, 300);// Detect Multi-Wallet Conflict
+(function() {
+  var hasMM = false, hasOKX = typeof window.okxwallet !== 'undefined';
+  try { hasMM = window.ethereum && window.ethereum.isMetaMask && !hasOKX; } catch(e) {}
+  if (window.__providers && window.__providers.metamask) hasMM = true;
+  // If OKX installed and MetaMask not detected via EIP-6963, mark conflict
+  if (hasOKX && !hasMM) {
+    window.__mmConflict = true;
+  }
+})();
 })();
 
 <!-- Wallet Modal -->
@@ -348,7 +357,7 @@ function connectWallet(t){
   if(t==="wc"){connectWC();return}
   var e=window.ethereum,o=window.okxwallet;
   var m={
-    metamask:{p:(window.__providers&&window.__providers.metamask?window.__providers.metamask.provider:e),ok:e&&e.isMetaMask||window.__providers&&window.__providers.metamask,n:"MetaMask"},
+    metamask:{p:(window.__providers&&window.__providers.metamask?window.__providers.metamask.provider:e),ok:window.__providers&&window.__providers.metamask?true:e&&e.isMetaMask&&!window.okxwallet,n:"MetaMask"},
     okx:{p:(window.__providers&&window.__providers.okx?window.__providers.okx.provider:window.okxwallet),ok:window.okxwallet!==void 0||window.__providers&&window.__providers.okx,n:"OKX Wallet"},
     trust:{p:e,ok:e&&e.isTrust,n:"Trust Wallet"},
     tp:{p:e,ok:e&&e.isTokenPocket,n:"TokenPocket"},
@@ -365,7 +374,7 @@ function connectWallet(t){
 function updateWalletStatus(){
   var e=window.ethereum,o=window.okxwallet;
   var s=function(id,ok){var el=document.getElementById(id);if(el)el.textContent=ok?"&#x2705; 已安装":"未安装"};
-  s("ws-mm",e&&e.isMetaMask);s("ws-okx",o!==void 0);
+  s("ws-mm",(window.__providers&&window.__providers.metamask?true:e&&e.isMetaMask&&!window.okxwallet));s("ws-okx",o!==void 0);
   s("ws-trust",e&&e.isTrust);s("ws-tp",e&&e.isTokenPocket);
   s("ws-cb",e&&e.isCoinbaseWallet);s("ws-rb",e&&e.isRabby);
   s("ws-bn",e&&e.isBinance);s("ws-other",e!==void 0);
