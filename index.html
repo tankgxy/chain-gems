@@ -288,7 +288,26 @@ footer .links a:hover{color:var(--accent2)}
 </div>
 </footer>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast"></div><script>
+// EIP-6963: wallet provider discovery
+window.__providers = {};
+(function() {
+  window.addEventListener('eip6963:announceProvider', function(e) {
+    var d = e.detail;
+    if (d && d.info && d.provider) {
+      var name = d.info.name.toLowerCase();
+      if (name.indexOf('metamask') >= 0) window.__providers.metamask = d;
+      if (name.indexOf('okx') >= 0) window.__providers.okx = d;
+      if (name.indexOf('trust') >= 0) window.__providers.trust = d;
+      if (name.indexOf('tokenpocket') >= 0 || name.indexOf('tp') >= 0) window.__providers.tp = d;
+      if (name.indexOf('coinbase') >= 0) window.__providers.coinbase = d;
+      if (name.indexOf('rabby') >= 0) window.__providers.rabby = d;
+      if (name.indexOf('binance') >= 0) window.__providers.binance = d;
+    }
+  });
+  window.dispatchEvent(new Event('eip6963:requestProvider'));
+  setTimeout(function() { window.dispatchEvent(new Event('eip6963:requestProvider')); }, 300);
+})();
 
 <!-- Wallet Modal -->
 <div class="modal-overlay" id="walletModal">
@@ -329,8 +348,8 @@ function connectWallet(t){
   if(t==="wc"){connectWC();return}
   var e=window.ethereum,o=window.okxwallet;
   var m={
-    metamask:{p:e,ok:e&&e.isMetaMask,n:"MetaMask"},
-    okx:{p:o,ok:o!==void 0,n:"OKX Wallet"},
+    metamask:{p:(window.__providers&&window.__providers.metamask?window.__providers.metamask.provider:e),ok:e&&e.isMetaMask||window.__providers&&window.__providers.metamask,n:"MetaMask"},
+    okx:{p:(window.__providers&&window.__providers.okx?window.__providers.okx.provider:window.okxwallet),ok:window.okxwallet!==void 0||window.__providers&&window.__providers.okx,n:"OKX Wallet"},
     trust:{p:e,ok:e&&e.isTrust,n:"Trust Wallet"},
     tp:{p:e,ok:e&&e.isTokenPocket,n:"TokenPocket"},
     coinbase:{p:e,ok:e&&e.isCoinbaseWallet,n:"Coinbase"},
