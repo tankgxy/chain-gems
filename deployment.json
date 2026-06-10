@@ -1,0 +1,9 @@
+﻿{
+  "contractAddress": "0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5",
+  "deployTxHash": "0x5abbf3f9a49b2fdf76c3b0ec60b31233d4fac1c3694ba0deccb3c37708d05902",
+  "deployerAddress": "0xA940FdDF45FaF5eacc96Bb9aAF96554833Bd148E",
+  "chainId": 56,
+  "blockNumber": 103431883,
+  "deployedAt": "2026-06-10T13:54:00+08:00",
+  "explorerUrl": "https://bscscan.com/address/0xFdCF68F1A9F4AB335c63A45FdCAB9515CaeED9b5"
+}
