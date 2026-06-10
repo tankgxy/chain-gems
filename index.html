@@ -212,7 +212,7 @@ footer .links a:hover{color:var(--accent2)}
   <h2 class="section-title">铸造你的宝石</h2>
   <p class="section-sub">连接钱包，选择数量，点击铸造。</p>
   <div class="preview-section">
-    <div class="preview-card" id="previewCard"><div class="ph" id="previewPlaceholder">连接钱包预览藏品</div></div>
+    <div class="preview-card" id="previewCard"><div class="ph" style="padding:20px"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="gbg" cx="50%" cy="50%" r="60%"><stop offset="0%" stop-color="#1a1040"/><stop offset="100%" stop-color="#06070e"/></radialGradient><linearGradient id="gg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c084fc"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="gg2" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#5b21b6"/></linearGradient><linearGradient id="gg3" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#ddd6fe"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient><linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fff" stop-opacity="0.6"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><rect width="400" height="400" fill="url(#gbg)"/><polygon points="200,40 340,200 200,360 60,200" fill="url(#gg1)" stroke="#a78bfa" stroke-width="1"/><polygon points="200,40 340,200 200,360 200,200" fill="url(#gg2)" opacity="0.7"/><polygon points="200,40 60,200 200,360 200,200" fill="url(#gg3)" opacity="0.5"/><polygon points="200,80 300,200 200,320 100,200" fill="url(#gl)" opacity="0.3"/><polygon points="200,120 260,200 200,280 140,200" fill="url(#gg3)" opacity="0.4"/><polygon points="200,150 230,200 200,250 170,200" fill="#fff" opacity="0.15"/><circle cx="170" cy="160" r="4" fill="#fff" opacity="0.8"/><circle cx="160" cy="180" r="2" fill="#fff" opacity="0.5"/><circle cx="230" cy="240" r="3" fill="#fff" opacity="0.4"/><path d="M150,150 Q200,100 250,150" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/><text x="200" y="230" text-anchor="middle" fill="#a78bfa" font-size="13" font-family="sans-serif" opacity="0.6">CHAIN GEMS</text></svg></div></div>
     <div class="preview-info">
       <h2 id="collectionName">Chain Gems Genesis</h2>
       <div class="desc" id="collectionDesc">连接钱包加载藏品信息...</div>
@@ -448,7 +448,7 @@ function disconnectWallet(){
   $("#mintBtn").disabled=true;$("#mintBtn").textContent="请先连接钱包";
   updateDisplay(0,0,"0","--","连接钱包加载信息...");
   $("#galleryGrid").innerHTML="<div class=\"gallery-empty\">连接钱包后，藏品会显示在这里</div>";
-  $("#previewCard").innerHTML="<div class=\"ph\">连接钱包预览藏品</div>";
+  $("#previewCard").innerHTML="<div class=\"ph\">PLACEHOLDER_TEMP</div>";
   $("#progressFill").style.width="0%";
   $("#progressLabel").textContent="0 / 0 已铸造";
   $("#progressPct").textContent="0%";
